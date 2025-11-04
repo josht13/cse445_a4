@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="Hotels.xsd">
+        xsi:schemaLocation="http://www.w3schools.com Hotels.xsd"
+        xmlns="http://www.w3schools.com">
 
 	<Hotel Id="H001" Rating="4.6">
 		<Name>Canopy by Hilton Tempe Downtown</Name>
@@ -133,3 +134,4 @@
 	</Hotel>
 
 </Hotels>
+
