@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ❌ 1. Wrong root element name ("HotelList" instead of "Hotels") -->
+<HotelList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="Hotels.xsd">
+
+	<!-- ❌ 2. Missing required attribute "Id" -->
+	<Hotel Rating="4.6">
+		<Name>Canopy by Hilton Tempe Downtown</Name>
+		<Phone>480-968-6800</Phone>
+		<Address>
+			<Number>108</Number>
+			<Street>E University Dr</Street>
+			<City>Tempe</City>
+			<State>AZ</State>
+			<Zip>85281</Zip>
+			<NearestAirport>PHX</NearestAirport>
+		</Address>
+	</Hotel>
+
+	<!-- ❌ 3. Missing required element (no Phone element) -->
+	<Hotel Id="H002" Rating="4.3">
+		<Name>AC Hotel by Marriott Phoenix Tempe/Downtown</Name>
+		<Address>
+			<Number>100</Number>
+			<Street>E Rio Salado Pkwy</Street>
+			<City>Tempe</City>
+			<State>AZ</State>
+			<Zip>85281</Zip>
+			<NearestAirport>PHX</NearestAirport>
+		</Address>
+	</Hotel>
+
+	<!-- ❌ 4. Malformed closing tag (Address missing closing tag) -->
+	<Hotel Id="H003" Rating="4.2">
+		<Name>Graduate Tempe</Name>
+		<Phone>480-967-9431</Phone>
+		<Address>
+			<Number>225</Number>
+			<Street>E Apache Blvd</Street>
+			<City>Tempe</City>
+			<State>AZ</State>
+			<Zip>85281</Zip>
+			<NearestAirport>PHX</NearestAirport>
+			<!-- Missing </Address> -->
+		</Hotel>
+
+	<!-- ❌ 5. Duplicate element where only one allowed (two Name elements) -->
+	<Hotel Id="H004" Rating="4.5">
+		<Name>Tempe Mission Palms Hotel</Name>
+		<Name>Duplicate Name Element</Name>
+		<Phone>480-894-1400</Phone>
+		<Address>
+			<Number>60</Number>
+			<Street>E 5th St</Street>
+			<City>Tempe</City>
+			<State>AZ</State>
+			<Zip>85281</Zip>
+			<NearestAirport>PHX</NearestAirport>
+		</Address>
+	</Hotel>
+
+	<!-- Rest of hotels valid -->
+	<Hotel Id="H005" Rating="4.1">
+		<Name>Hyatt Place Tempe/Phoenix Airport</Name>
+		<Phone>480-804-9544</Phone>
+		<Address>
+			<Number>1413</Number>
+			<Street>W Rio Salado Pkwy</Street>
+			<City>Tempe</City>
+			<State>AZ</State>
+			<Zip>85281</Zip>
+			<NearestAirport>PHX</NearestAirport>
+		</Address>
+	</Hotel>
+
+</HotelList>
